@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+celery
+redis
+openai
+python-dotenv
+pandas
+python-docx
+owlready2
