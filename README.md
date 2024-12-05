@@ -34,3 +34,24 @@ To set up and run the Automating Requirement Classification program, follow the 
 - Git installed for version control.
 - Virtual Environment: It's recommended to use a virtual environment to manage dependencies.
 
+🏃 Running the Program : 
+
+Open three separate terminal tabs or windows to run the backend services concurrently.
+
+🟢 Terminal 1: Start Celery Worker
+This process handles asynchronous tasks required by the backend.
+
+ celery -A backend.tasks worker --loglevel=info
+
+🔵 Terminal 2: Start Uvicorn Server
+This serves the backend API using Uvicorn.
+
+ uvicorn backend.main:app --reload
+
+
+🟡 Terminal 3: Start Frontend Application
+This launches the Streamlit frontend interface.
+
+  cd frontend
+  streamlit run app.py
+
